@@ -44,10 +44,10 @@ ifeq ($(COMPRESS_XZ), y)
 	@xz -f $(DRV_DIR)/btintel.ko
 	@xz -f $(DRV_DIR)/btrtl.ko
 endif
-	depmod -a $(MDL_DIR)
+	depmod -a
 	@echo "installed revised btusb"
 
 uninstall:
 	rm -f $(DRV_DIR)/btusb.ko*
-	depmod -a $(MDL_DIR)
+	depmod -a
 	echo "uninstalled revised btusb"
